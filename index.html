@@ -1,8 +1,265 @@
-<html>
-	<head>
-		<title>Project</title>
-	</head>
-	<body>
-		<h1>Hello World!!!</h1>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSCI S-109A: Final Project</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Final Project for CSCI S-109A - Introduction to Data Science">  
+    <link rel="shortcut icon" href="fig/favicon.ico" type="image/vnd.microsoft.icon" />
+    <link href="home/bootstrap-custom.min.css" rel="stylesheet" />
+    <link href="home/font-awesome.min.css" rel="stylesheet" />
+    <link href="home/hack.min.css" rel="stylesheet" />
+    <link href="home//base.css" rel="stylesheet" />
+    <link href="home/cinder.css" rel="stylesheet" />
+    <link href="home/highlight.css" rel="stylesheet" />
+    <link href="home/xtra.css" rel="stylesheet" />
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+</head>
+
+<body class="homepage" >
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Collapsed navigation -->
+            <div class="navbar-header">
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- Main title -->
+                <a class="navbar-brand" href="#">
+                    CSCI S-109A: Introduction to Data Science: Final Project
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-md-3">
+            <div class="bs-sidebar hidden-print affix well" role="complementary">
+                <ul class="nav bs-sidenav">
+                    <li class="first-level active"><a href="#section-overview">Project: World Cup 2018</a></li>
+                    <li class="third-level"><a href="#section-overview">Project Overview</a></li>
+                    <li class="third-level"><a href="#section-goal">Goal</a></li>
+                    <li class="third-level"><a href="#section-data">Data</a></li>
+                    <li class="second-level"><a href="#section-eda">EDA</a></li>
+                    <li class="second-level"><a href="#section-eda">Designing Dataset</a></li>
+                    <li class="second-level"><a href="#section-eda">Preliminary Models</a></li>
+                    <li class="third-level"><a href="#section-eda">Logistic Regression</a></li>
+                    <li class="second-level"><a href="#section-eda">Expanding Dataset</a></li>
+                    <li class="second-level"><a href="#section-eda">Advanced Models</a></li>
+                    <li class="third-level"><a href="#section-eda">LDA/ QDA</a></li>
+                    <li class="third-level"><a href="#section-eda">Random Forrest</a></li>
+                    <li class="third-level"><a href="#section-eda">Bagging</a></li>
+                    <li class="third-level"><a href="#section-eda">Boosting</a></li>
+                    <li class="second-level"><a href="#section-eda">Running Predictions</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9" role="main">
+            <div style="object-fit:contain;">
+                <img src="fig/fifa2018_3.jpg" style="max-width:100%; height:auto;" />
+            </div>
+            <div>
+                <div style="float:left;vertical-align:middle;">
+                    <img src="fig/iacs.png" height="80px" width="70px"/>&nbsp;&nbsp;
+                </div>
+                <h1>Predicting outcome of FIFA World Cup 2018 matches using Machine Learning</h1>
+                <br/>
+                <hr style="display:block; border: 2px solid #b71010;" />
+                <br/>
+            </div>
+            
+            <h1 id="section-overview">Overview</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec sodales felis. Integer sollicitudin massa dui, id semper risus rhoncus nec. Nullam pulvinar, eros ut semper iaculis, orci augue sollicitudin enim, in euismod libero ex ac odio. Duis tortor dolor, malesuada sed ligula at, ultricies hendrerit nisi. Phasellus massa turpis, scelerisque a mi ac, porta feugiat odio. Phasellus sed blandit elit. Morbi ut tortor efficitur, feugiat metus eu, fermentum urna. Aenean at erat sit amet purus imperdiet consectetur. Integer ornare venenatis iaculis. Sed in placerat metus. In dictum erat eget pellentesque volutpat. Etiam mollis libero in nulla consequat, at sollicitudin dolor dapibus. Etiam libero augue, blandit vestibulum vulputate ac, commodo quis quam. Fusce vitae pretium massa.</p><br/>
+
+            <h2 id="section-goal">Goal</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec sodales felis. Integer sollicitudin massa dui, id semper risus rhoncus nec. Nullam pulvinar, eros ut semper iaculis, orci augue sollicitudin enim, in euismod libero ex ac odio. Duis tortor dolor, malesuada sed ligula at, ultricies hendrerit nisi. Phasellus massa turpis, scelerisque a mi ac, porta feugiat odio. Phasellus sed blandit elit. Morbi ut tortor efficitur, feugiat metus eu, fermentum urna. Aenean at erat sit amet purus imperdiet consectetur. Integer ornare venenatis iaculis. Sed in placerat metus. In dictum erat eget pellentesque volutpat. Etiam mollis libero in nulla consequat, at sollicitudin dolor dapibus. Etiam libero augue, blandit vestibulum vulputate ac, commodo quis quam. Fusce vitae pretium massa.</p><br/>
+
+            <h2 id="section-data">Data</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec sodales felis. Integer sollicitudin massa dui, id semper risus rhoncus nec. Nullam pulvinar, eros ut semper iaculis, orci augue sollicitudin enim, in euismod libero ex ac odio. Duis tortor dolor, malesuada sed ligula at, ultricies hendrerit nisi. Phasellus massa turpis, scelerisque a mi ac, porta feugiat odio. Phasellus sed blandit elit. Morbi ut tortor efficitur, feugiat metus eu, fermentum urna. Aenean at erat sit amet purus imperdiet consectetur. Integer ornare venenatis iaculis. Sed in placerat metus. In dictum erat eget pellentesque volutpat. Etiam mollis libero in nulla consequat, at sollicitudin dolor dapibus. Etiam libero augue, blandit vestibulum vulputate ac, commodo quis quam. Fusce vitae pretium massa.</p><br/>
+
+            <h1 id="section-eda">Exploratory Data Analysis (EDA)</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec sodales felis. Integer sollicitudin massa dui, id semper risus rhoncus nec. Nullam pulvinar, eros ut semper iaculis, orci augue sollicitudin enim, in euismod libero ex ac odio. Duis tortor dolor, malesuada sed ligula at, ultricies hendrerit nisi. Phasellus massa turpis, scelerisque a mi ac, porta feugiat odio. Phasellus sed blandit elit. Morbi ut tortor efficitur, feugiat metus eu, fermentum urna. Aenean at erat sit amet purus imperdiet consectetur. Integer ornare venenatis iaculis. Sed in placerat metus. In dictum erat eget pellentesque volutpat. Etiam mollis libero in nulla consequat, at sollicitudin dolor dapibus. Etiam libero augue, blandit vestibulum vulputate ac, commodo quis quam. Fusce vitae pretium massa.</p><br/>
+
+<h3>Lets start exploring the data</h3>
+<pre><code class="python"># import the necessary libraries
+%matplotlib inline
+import numpy as np
+import scipy as sp
+import matplotlib as mpl
+import matplotlib.cm as cm
+import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
+import pandas as pd
+from pandas import Series
+import random
+</code></pre><br/>
+
+<h3>Dataset: International Results</h3>
+<p><code>International Results</code> dataset contains historical soccer-match results, from the year 1872, till the current year, 2018. The dataset contains <code>39,654</code> observations, and <code>9</code> variables &mdash;
+<ul><li><code>date</code>: when the match is held</li>
+<li><code>home_team</code>: name of the home team</li>
+<li><code>away_team</code>: name of the away team</li>
+<li><code>home_score</code>: number of goals made by the home_team</li>
+<li><code>away_score</code>: number of goals made by the away_team</li>
+<li><code>tournament</code>: name of the tournament, ex: FIFA World Cup</li>
+<li><code>city</code>: where the game is held</li>
+<li><code>country</code>: where the game is held.</li>
+<li><code>neutral</code>: False, if game venue is not in home_team's city/ country. True, otherwise.</li></ul></p>
+
+<pre><code class="python">df_matches = pd.read_csv("datasets/fifa/international_results.csv")
+print("df_matches: ", df_matches.shape)
+print(df_matches.dtypes)
+df_matches.sample(10)
+</code></pre>
+<p><img src="fig/py_tbl_001.png" style="width:100%; height:auto;"/></p><br/>
+
+<h3>Dataset Transformation</h3>
+<p>We'll add couple of additional variables &mdash; dervied from the existing set of variables. These new variables do not add any new information to the dataset, but will help us to summarize, and visualize the data in a better way &mdash;
+<ul><li><code>neutral</code>: changed datatype to numeric binary (from boolean binary)</li>
+<li><code>year</code>: when the match is held</li>
+<li><code>net score</code>: home_score minus the away_score</li>
+<li><code>result</code>: of the game
+<ul><li><code>0 (loss)</code>: indicates home_team losses the game</li>
+<li><code>1 (win)</code>: indicates home_team wins the game</li>
+<li><code>2 (draw)</code>: indicates game is a draw</li></ul>
+</li></ul><br/>
+<img src="fig/py_tbl_002.png" style="width:100%; height:auto;"/>
+</p><br/>
+
+<h3>Data Visualization</h3>
+<p>We'll run some basic data visualization, to visually observe data distributions, and trends.
+<br/><br/><img src="fig/plot_001.png" style="width:100%; height:auto;"/><br/>From the plots above we can see that &mdash; 
+<ul><li>data is significantly skewed over the <code>year</code> variable. The volume of data available between <code>1990 - 2018</code> (18 years) is far greater than the volume of data available between <code>1880 - 1990</code> (110 years). This trend could be for many reasons &mdash; (1) more games being played in recent years, (2) more data being captured & recorded for the games being played. We'll keep this trend in mind, while working with this dataset to build our learning models.</li>
+<li>data is also skewed over the <code>result</code> variable. There are far more observations with <code>result=win</code>, compared to combined observations of <code>result=loss</code>, and <code>result=draw</code>. As <code>result</code> variable will be our outcome variable, we would have preferred if the volume of data was balanced between these three levels of <code>result</code> variable. We'll have to keep this trend in mind, while working with this dataset to build our learning models.</li>
+</ul>
+<img src="fig/plot_002.png" style="width:100%; height:auto;"/><br/>
+The plot above shows the &mdash;
+<ul>
+<li>top-20 teams (left-plot) of all time: Brazil, Argentina, Germany, England, Mexico, ...</li>
+<li>bottom-20 teams (right-plot) of all time: Luxembourg, Finland, Switzerland, Norway, Malta, ...</li>
+</ul><br/>
+<img src="fig/plot_003.png" style="width:100%; height:auto;"/><br/>
+The plot above shows the &mdash;
+<ul>
+<li>top-20 teams (left-plot) for last 10 years: Mexico, Egypt, USA, Japan, Spain, ...</li>
+<li>bottom-20 teams (right-plot) for last 10 years: Luxembourg, Andorra, Malta, Qatar, San Marino, ...</li>
+</ul><br/>
+From the data above we can see that there is a significant change in both top & bottom team orders within last 10 years. We see the top 4 teams of all time: Brazil, Argentina, Germany, England, do not show up in top 5 teams for last 10 years. What could be the reason for this? 
+</p><br/>
+
+<h3>Dataset Transformation: Adding FIFA Team Ranking</h3>
+<p>We scraped FIFA offical team rankings, from: https://www.fifa.com/fifa-world-ranking/ranking-table/men/index.html. FIFA started maintaing the offical ranking data from the year 1993, and this data gets updated on monthly basis. We are adding following new variables &mdash;<br/>
+<ul><li><code>home_rank</code>: max rank of the home team in the given year</li>
+<li><code>away_rank</code>: max rank of the away team in the given year</li>
+<li><code>rank_diff</code>: difference between home_team rank and away_team rank</li></ul>
+<p><code>Note</code>: <em>as FIFA ranking data starts from year 1993, we'll be dropping any observation from the original dataset, which is older than year 1993.</em><br/><br/>
+</p>
+
+<pre><code class="python"># load FIFA ranking dataset
+df_ranking = pd.read_pickle("datasets/ranking_data.pkl")
+df_ranking.sample(10)<br/>
+# groupby FIFA ranking data by team. aggregate on rank
+df_grouped_ranking = df_ranking.groupby(["year","team"]).agg({
+    "rank": 'max'
+}).copy()
+df_grouped_ranking = df_grouped_ranking.reset_index()
+df_grouped_ranking['year'] = pd.to_numeric(df_grouped_ranking['year'])
+df_grouped_ranking['rank'] = pd.to_numeric(df_grouped_ranking['rank'])
+df_grouped_ranking.sample(10)<br/>
+# apply transformation on original dataset
+df_matches = df_matches.drop(df_matches[df_matches.year &lt; 1993].index)
+df_matches['home_rank'] = df_matches.apply(get_home_rank, axis=1)
+df_matches['away_rank'] = df_matches.apply(get_away_rank, axis=1)
+df_matches['rank_diff'] = df_matches.apply(get_rank_diff, axis=1)<br/>
+df_matches.sample(10)
+</code></pre>
+<p><img src="fig/py_tbl_006.png" style="width:100%; height:auto;"/></p><br/>
+
+<h3>Data Visualization: Team Rankings</h3>
+<p>We'll run some visualizations based on team rankings to understand, how the team ranking affects the outcome of a match.'</p>
+<img src="fig/plot_004.png" style="width:100%; height:auto;"/><br/>
+<p>The left-side plot above seems to suggest that team rankings might be correlated to outcome of the match. The first set of violin-plots suggest that when home_team ranking are lower than away_team ranking, the home_team is more likely to loose the game. The middle set of violin-plots suggest that when home_team ranking are greater than away_team ranking, the home_team is more likely to win the game. The last set of violin-plots (to the extreme right), suggest that when home_team ranking, and away_team ranking are similar, the game is more likely to draw.</p><br/>
+
+
+
+
+
+
+        </div> <!-- <div class="col-md-9" role="main"> -->
+    </div> <!-- <div class="container"> -->
+
+    <!-- <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+            <small>Project maintained by the friendly folks at <a target=_blanks href="https://www.drivendata.org">DrivenData</a>.<br></small>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+        </p>
+    </footer> -->
+
+    <script src="home/jquery-1.10.2.min.js"></script>
+    <script src="home/bootstrap-3.0.3.min.js"></script>
+    <script src="home/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '.';
+    </script>
+    <script data-main="home/search.js" src="require.js"></script>
+    <script src="home/base.js"></script>
+    <script src="home/require.js"></script>
+    <script src="home/search.js"></script>
+
+    <!-- <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    </body>
+
 </html>
