@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Final Project for CSCI S-109A - Introduction to Data Science">  
+    <meta name="description" content="Final Project for CSCI S-109A - Introduction to Data Science">
     <link rel="shortcut icon" href="fig/favicon.ico" type="image/vnd.microsoft.icon" />
     <link href="home/bootstrap-custom.min.css" rel="stylesheet" />
     <link href="home/font-awesome.min.css" rel="stylesheet" />
@@ -24,7 +24,7 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
 
-    <script src="webfont.js"></script>
+    <script src="home/webfont.js"></script>
     <script>
     WebFont.load({
         google: {
@@ -33,7 +33,7 @@
     });
     </script>
 
-    
+
 </head>
 
 <body class="homepage" >
@@ -65,17 +65,33 @@
                     <li class="third-level"><a href="#section-overview">Project Overview</a></li>
                     <li class="third-level"><a href="#section-goal">Goal</a></li>
                     <li class="third-level"><a href="#section-data">Data</a></li>
-                    <li class="second-level"><a href="#section-eda">EDA</a></li>
-                    <li class="second-level"><a href="#section-eda">Designing Dataset</a></li>
-                    <li class="second-level"><a href="#section-eda">Preliminary Models</a></li>
-                    <li class="third-level"><a href="#section-eda">Logistic Regression</a></li>
-                    <li class="second-level"><a href="#section-eda">Expanding Dataset</a></li>
-                    <li class="second-level"><a href="#section-eda">Advanced Models</a></li>
-                    <li class="third-level"><a href="#section-eda">LDA/ QDA</a></li>
-                    <li class="third-level"><a href="#section-eda">Random Forrest</a></li>
-                    <li class="third-level"><a href="#section-eda">Bagging</a></li>
-                    <li class="third-level"><a href="#section-eda">Boosting</a></li>
-                    <li class="second-level"><a href="#section-eda">Running Predictions</a></li>
+                    <li class="second-level"><a href="#section-lr">Literature Review</a></li>
+                    <li class="second-level"><a href="#section-eda">Exploratory Data Analysis (EDA)</a></li>
+                    <li class="second-level"><a href="#section-eda">Visualizations</a></li>
+                    <li class="third-level"><a href="#section-v1">Game & Game Results Distributions</a></li>
+                    <li class="third-level"><a href="#section-v2">Top 20 Winners & Losers</a></li>
+                    <li class="third-level"><a href="#section-v3">Distribution of Team Rankings, and Rank Difference</a></li>
+                    <li class="second-level"><a href="#section-f1">Features Designing</a></li>
+                    <li class="third-level"><a href="#section-f1">Year, Net Score, Result</a></li>
+                    <li class="third-level"><a href="#section-f2">FIFA Team Ranking</a></li>
+                    <li class="third-level"><a href="#section-f3">Additional Features</a></li>
+                    <li class="third-level"><a href="#section-f4">Quadratic & Interaction terms</a></li>
+                    <li class="third-level"><a href="#section-f5">Normalize data & Dummy variables</a></li>
+                    <li class="third-level"><a href="#section-f6">Training and Test split</a></li>
+                    <li class="first-level"><a href="#section-models">Building Models</a></li>
+                    <li class="second-level"><a href="#section-models-logistic">Single Models</a></li>
+                    <li class="third-level"><a href="#section-models-logistic">Logistic Regression</a></li>
+                    <li class="third-level"><a href="#section-models-lda">Linear Discriminant Analysis</a></li>
+                    <li class="third-level"><a href="#section-model-qda">Quadratic Discriminant Analysis</a></li>
+                    <li class="third-level"><a href="#section-model-knn">K-Nearest Neighbors</a></li>
+                    <li class="third-level"><a href="#section-model-dtree">Decision Tree Classifier</a></li>
+                    <li class="second-level"><a href="#section-model-randomf">Ensemble Models</a></li>
+                    <li class="third-level"><a href="#section-model-randomf">Random Forest Classifier</a></li>
+                    <li class="third-level"><a href="#section-model-adaboost">AdaBoost Classifier</a></li>
+                    <li class="third-level"><a href="#section-model-stacking">Stacking</a></li>
+                    <li class="second-level"><a href="#section-model-neural">Neural Network</a></li>
+                    <li class="second-level"><a href="#section-models-compare">Model Comparison</a></li>
+                    <li class="first-level"><a href="#section-models-final">Final Predictions</a></li>
                 </ul>
             </div>
         </div>
@@ -92,18 +108,110 @@
                 <hr style="display:block; border: 2px solid #b71010;" />
                 <br/>
             </div>
-            
+
             <h1 id="section-overview">Overview</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec sodales felis. Integer sollicitudin massa dui, id semper risus rhoncus nec. Nullam pulvinar, eros ut semper iaculis, orci augue sollicitudin enim, in euismod libero ex ac odio. Duis tortor dolor, malesuada sed ligula at, ultricies hendrerit nisi. Phasellus massa turpis, scelerisque a mi ac, porta feugiat odio. Phasellus sed blandit elit. Morbi ut tortor efficitur, feugiat metus eu, fermentum urna. Aenean at erat sit amet purus imperdiet consectetur. Integer ornare venenatis iaculis. Sed in placerat metus. In dictum erat eget pellentesque volutpat. Etiam mollis libero in nulla consequat, at sollicitudin dolor dapibus. Etiam libero augue, blandit vestibulum vulputate ac, commodo quis quam. Fusce vitae pretium massa.</p><br/>
+            <p>
+              Every four years nations around the world compete for the FIFA World Cup &mdash; the ultimate football tournament. The tournament is organized by Fédération Internationale de Football Association (FIFA) which consists of more than 200 nations spread across 6 confederations. FIFA believes strongly that the sport of football is a uniting force for the world. FIFA has admirable goals of increasing participation and access to all. With larger membership than the United Nations, FIFA’s influence spans the globe. While the premier stages of the world cup span little over a month, the preliminary stages of qualification begin more than three years before the final match and last over two years. Over 800 matches are played between the 200+ nations throughout this qualification stage. Each nation plays home and away games. <br/><br/>
+              In this project we will try to build machine learning models, using which we can predict the outcome of a given FIFA World Cup 2018 match.
+            </p><br/>
 
             <h2 id="section-goal">Goal</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec sodales felis. Integer sollicitudin massa dui, id semper risus rhoncus nec. Nullam pulvinar, eros ut semper iaculis, orci augue sollicitudin enim, in euismod libero ex ac odio. Duis tortor dolor, malesuada sed ligula at, ultricies hendrerit nisi. Phasellus massa turpis, scelerisque a mi ac, porta feugiat odio. Phasellus sed blandit elit. Morbi ut tortor efficitur, feugiat metus eu, fermentum urna. Aenean at erat sit amet purus imperdiet consectetur. Integer ornare venenatis iaculis. Sed in placerat metus. In dictum erat eget pellentesque volutpat. Etiam mollis libero in nulla consequat, at sollicitudin dolor dapibus. Etiam libero augue, blandit vestibulum vulputate ac, commodo quis quam. Fusce vitae pretium massa.</p><br/>
+            <p>
+                As stated in the section above, our goals for this project is to to build machine learning models, using which we can predict the outcome of a given FIFA World Cup 2018 match, and be able to predict the final winner. To achieve this goal, we will &mdash;
+                <ul>
+                  <li>Collect data about FIFA matches, teams, and players &mdash; using readily available pre-build FIFA related datasets, and scraping data off the publicly available sources on the Internet.</li>
+                  <li>Analyze, and visualize the collected data, to better understand the nature of data, and observe any evident trends. </li>
+                  <li>Design features for our dataset, on which we can train various machine learning models.</li>
+                  <li>Train machine learning models to predict outcome of FIFA matches, using the defined features.</li>
+                  <li>Ultimately, be able to use our trained models to predict the outcome of &mdash;
+                    <ul>
+                      <li>FIFA World Cup 2018 &mdash; Round-16 matches</li>
+                      <li>FIFA World Cup 2018 &mdash; Quater Final matches</li>
+                      <li>FIFA World Cup 2018 &mdash; Semi Final matches</li>
+                      <li>FIFA World Cup 2018 &mdash; Winner</li>
+                    </ul>
+                  </li>
+                  <li>With the full trained model(s), we'll be able to produce our predictions, and fill the brackets in the graphic below &mdash;</li>
+                </ul>
+                <div align="center">
+                  <img src="fig/ALPEOs0.jpg" style="width:600px; height:auto;"/>
+                  <br/><small><em>FIFA World Cup 2018 - Brackets</em></small>
+                </div>
+            </p><br/>
 
             <h2 id="section-data">Data</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec sodales felis. Integer sollicitudin massa dui, id semper risus rhoncus nec. Nullam pulvinar, eros ut semper iaculis, orci augue sollicitudin enim, in euismod libero ex ac odio. Duis tortor dolor, malesuada sed ligula at, ultricies hendrerit nisi. Phasellus massa turpis, scelerisque a mi ac, porta feugiat odio. Phasellus sed blandit elit. Morbi ut tortor efficitur, feugiat metus eu, fermentum urna. Aenean at erat sit amet purus imperdiet consectetur. Integer ornare venenatis iaculis. Sed in placerat metus. In dictum erat eget pellentesque volutpat. Etiam mollis libero in nulla consequat, at sollicitudin dolor dapibus. Etiam libero augue, blandit vestibulum vulputate ac, commodo quis quam. Fusce vitae pretium massa.</p><br/>
+            <p>
+              We have collected data from multiple sources &mdash;
+              <ul>
+                <li>
+                  <b>Provided Datasets</b><br/>
+                  <ul>
+                    <li><b><code>international_results.csv</code></b>: this dataset contains approximately 40,000 match resuts, between the years 1880 - 2018.<br/></li>
+                    <li><b><code>PlayerAttributeData.csv</code></b>, <b><code>PlayerPersonalData.csv</code></b>, <b><code>PlayerPlayingPositionData.csv</code></b>: contains the data for approximately 18,000 FIFA players.<br/></li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Data Scraped from Web</b><br/>
+                  <ul>
+                    <li><b><code>Historical FIFA Ranking Data</code></b>: The latest men's FIFA ranking data is available at: <a href="https://www.fifa.com/fifa-world-ranking/ranking-table/men/index.html">https://www.fifa.com/fifa-world-ranking/ranking-table/men/index.html</a>, which is published on 07-June-2018. The oldest men's FIFA ranking data is available at: <a href="https://www.fifa.com/fifa-world-ranking/ranking-table/men/rank=2/index.html">https://www.fifa.com/fifa-world-ranking/ranking-table/men/rank=2/index.html</a>, which was publsihed on 08-August-1993. We have parsed this data from 288+ pages, which provided us the FIFA ranking for various men's teams, for time period between 08-August-1993, and 07-June-2018.
+                      <div align="center">
+                        <img src="fig/ranking.png" style="width:400px; height:auto;"/>
+                        <br/><small><em>FIFA ranking page for 08-August-1993</em></small>
+                      </div><br/>
+                    </li>
+                    <li><b><code>Historical FIFA World Cup Winners</code></b>: The historical FIFA world-cup finals data is available at: <a href="https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals">https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals</a>, which is last published (updated) on 25-July-2018. We'll scrape this data to build a dataset of historical FIFA world cup winners.
+                      <div align="center">
+                        <img src="fig/fifa_results.png" style="width:400px; height:auto;"/>
+                        <br/><small><em>Historical FIFA World Cup Final Match Results</em></small>
+                      </div><br/>
+                    </li>
+                    <li><b><code>FIFA World Cup — All Time Team Rankings</code></b>: FIFA all time team rankings, and associated team statistics is available at <a href="https://www.fifa.com/fifa-tournaments/statistics-and-records/worldcup/teams/index.html"> https://www.fifa.com/fifa-tournaments/statistics-and-records/worldcup/teams/index.html</a>. We'll scrape this data to build a dataset of FIFA team rankings.
+                      <div align="center">
+                        <img src="fig/all_time_ranking.png" style="width:400px; height:auto;"/>
+                        <br/><small><em>FIFA World Cup — All Time Team Rankings</em></small>
+                      </div><br/>
+                    </li>
+                    <li><b><code>FIFA World Cup — Participations</code></b>: FIFA World Cup - team participations, and associated team statistics is available at <a href="https://www.fifa.com/fifa-tournaments/statistics-and-records/worldcup/teams/index.html"> https://www.fifa.com/fifa-tournaments/statistics-and-records/worldcup/teams/index.html</a>. We'll scrape this data to build a dataset of FIFA team participations in world cup tournament.
+                      <div align="center">
+                        <img src="fig/wc_participation.png" style="width:400px; height:auto;"/>
+                        <br/><small><em>FIFA World Cup — Team Participations</em></small>
+                      </div><br/>
+                    </li>
+                    <li><b><code>Note</code></b>: process & method of data collection using web-scraping is documented in the supplemental notebook: <a href="https://github.com/rdharjai/csci_s109a_final_project/blob/master/nb_webscrape.ipynb">nb_webscrape.ipynb</a>.</li>
+                  </ul>
+                </li>
+              </ul>
+            </p><br/>
+
+            <h1 id="section-lr">Literature Review</h1>
+            <h3 id="section-lr1">Prediction of the FIFA World Cup 2018 using a Random Forest Model</h3>
+            <p>
+              <small><em>Prediction of the FIFA World Cup 2018 – A random forest approach with an emphasis on estimated team ability parameters, Andreas Groll, Christophe Ley, Gunther Schauberger, Hans Van Eetvelde</em></small><br/>
+              In this research, the author computed three different models, Poisson regression models, random forests and ranking methods , to predict the scores the soccer matches in FIFA World Cup 2018. The fundamental of the three models is essentially based on the predictive performances from the four previous FIFA World Cups. The Poisson Regression model and the random forest is based on the teams’ covariate information, while the Ranking method estimates ample parameters that reflect the current strength of the teams . According to the authors, the best predictive models were the Ranking method and the Random Forest. However to maximize the predictive performance, the random forest was stacked with the ranking methods to create an ensemble model . The  team ability parameters from the ranking methods as an additional covariate substantially improved the predictive power. The team ability parameters were estimated by a bivariate Poisson model with a half period of 3 years. All the matches of 228 national teams played since 2010-06-13 up to 2018-06-06 were used in the estimations, which resulted in more than 7000 matches. The recent predictor variables are taken as the latest values shortly before the world which includes the latest national teams of 23 player for the upcoming World Cup. Finally, the whole tournament was simulated in the 100,000 times. Based on the simulations, the probabilities of each of the 32 national team reaching the knockout stage, quarter finals, semi finals and finals are obtained. According to these simulations, Spain and Germany turned out to be the top favorites, with a slight advantage for Spain.
+            </p><br/>
+
+            <h3 id="section-lr2">Elo Ranking Based Prediction Models for the FIFA World Cup 2018</h3>
+            <p>
+              <small><em>On Elo  based prediction models for the FIFA World cup 2018, Gilch, Lorenz A.; Müller, Sebastian</em></small><br/>
+              For the upcoming FIFA World Cup 2018, the authors of this research piece decided to compute on various Poisson regression models with increasing complexity that include the Elo points of the teams as covariates and incorporates differences of team specific effects. Elo ranking was preferred over the FIFA ranking because the FIFA ranking changed over time, and the Elo ranking is more widely used in football forecast models. At time of this analysis, the composition and the line ups of teams were not released hence lack two other covariates. To compensate for this, the authors took the approach to solely base their models on the Elo points and matches of the participating teams on neutral ground since 2010. <br/>
+              The four types of Poisson models used in this are Independent Poisson regression model, Bi-variance Poisson regression model, Bivariate Poisson regression with diagonal inflation, and Nested Poisson regression model. The models were validated on the data of the FIFA Worldcups 2010 and 2014. For each model, 100,000 simulations were performed. The whole tournament was simulated  according to the FIFA rules, that is at the end of each group stage, the final group table is evaluated according to the FIFA rules, except Fair-Play criterion. Next, the Elo scores of the teams were updated after each game. Furthermore, the score of matches which goes into extra is simulated with Poisson rates of 30 minutes (90 minutes/3). A major part of the statistical novelty of the presented work lies in the introduction of two new score functions for ordinal variables as well as the construction of the nested regression model. This model outperforms previous studied models, that use (inflated) bivariate Poisson regression, when tested on the previous FIFA World Cups 2010 and 2014. To conclude, the  Poisson regression models coincide in the order of the first four favorites for the cup. In particular, they favor Germany and not Brazil. However, single probabilities may be quite different. For instance, Germany is estimated to win the cup with 26.00% in the independent Poisson regression model and with 30.50% in the nested Poisson regression model. The circumstance that all models do favor Germany and not Brazil may depend on team specific effects and the following fact. If both Germany and Brazil win their group they will meet only in the final, where Germany is predicted to have the  advantage.
+
+            </p><br/>
+
+            <h3 id="section-lr3">Monte Carlo Modelling of the FIFA World Cup</h3>
+            <p>
+              <small><em>University of Adelaide , Predicting the outcomes of FIFA World Cup, Steve Begg, University's Australian School of Petroleum, <a href="https://phys.org/news/2018-06-outcomes-fifa-world-cup.html">https://phys.org/news/2018-06-outcomes-fifa-world-cup.html</a></em></small><br/>
+              Steve Begg ,who is the Professor of Decision-making and Risk Analysis at the University's Australian School of Petroleum, has developed a Monte Carlo Simulation of the FIFA World Cup 2018. The Monte Carlo Simulation is essentially based on team rankings as well other inputs, for example, recent form. The primary concept of the Monte Carlo Model is instead of trying to workout every possible outcome of a complex system, enough possibilities are modelled inorder to be able to estimate the chance of any particular outcome occurring. This approach eradicates the possibility of overfitting of a highly complex model and provides a more flexible model. "The outcomes of many decisions we make are uncertain because of things outside of our control," says Professor Begg.. Although just the mere group stage provides with almost 430 million outcomes, Professor Begg has decided to generate a sum total of 100000 possible ways the whole tournament of 63 matches could occur. In the Monte Carlo model, the two uncertainties are the team’s tournament form and the team’s match form. The potential scores for each occurring match is derived from the possible number of goals, based on scores from all matches in the three recent World Cups and the two teams’ relative match form. Based on his input , Professor Begg has calculated the Socceroos (Australian national team) has 14% chance of advancing through the Groups stage, 3.8% of making the Quarters, 1.2% of the Semis, 0.3% of being in the Final, and 0.1% chance of being the 2018 World Cup Champions. Although this may seem like a set of disappointing set of probabilities from the perspective of Australian, Professor Begg stresses on the fact it’s important to predict based on evidence and reasoning rather than emotions.
+            </p><br/>
 
             <h1 id="section-eda">Exploratory Data Analysis (EDA)</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec sodales felis. Integer sollicitudin massa dui, id semper risus rhoncus nec. Nullam pulvinar, eros ut semper iaculis, orci augue sollicitudin enim, in euismod libero ex ac odio. Duis tortor dolor, malesuada sed ligula at, ultricies hendrerit nisi. Phasellus massa turpis, scelerisque a mi ac, porta feugiat odio. Phasellus sed blandit elit. Morbi ut tortor efficitur, feugiat metus eu, fermentum urna. Aenean at erat sit amet purus imperdiet consectetur. Integer ornare venenatis iaculis. Sed in placerat metus. In dictum erat eget pellentesque volutpat. Etiam mollis libero in nulla consequat, at sollicitudin dolor dapibus. Etiam libero augue, blandit vestibulum vulputate ac, commodo quis quam. Fusce vitae pretium massa.</p><br/>
+            <p>In this section we will explore the data (listed in the section above). We will &mdash;
+              <ul>
+                <li>Load and visually inspect the observations, and variables, in each dataset.</li>
+                <li>Review statistical summaries, like - range, mean, median, etc. for various variables.</li>
+                <li>Draw plots to visually inspect any trends in the data.</li>
+              </ul>
+            </p><br/>
 
 <h3>Lets start exploring the data</h3>
 <pre><code class="python"># import the necessary libraries
@@ -138,7 +246,7 @@ df_matches.sample(10)
 </code></pre>
 <p><img src="fig/py_tbl_001.png" style="width:100%; height:auto;"/></p><br/>
 
-<h3>Dataset Transformation</h3>
+<h3 id="section-f1">Add new features: Year, Net Score, Result</h3>
 <p>We'll add couple of additional variables &mdash; dervied from the existing set of variables. These new variables do not add any new information to the dataset, but will help us to summarize, and visualize the data in a better way &mdash;
 <ul><li><code>neutral</code>: changed datatype to numeric binary (from boolean binary)</li>
 <li><code>year</code>: when the match is held</li>
@@ -151,12 +259,14 @@ df_matches.sample(10)
 <img src="fig/py_tbl_002.png" style="width:100%; height:auto;"/>
 </p><br/>
 
-<h3>Data Visualization</h3>
+<h3 id="section-v1">Visualize: Game & Game Results Distributions</h3>
 <p>We'll run some basic data visualization, to visually observe data distributions, and trends.
-<br/><br/><img src="fig/plot_001.png" style="width:100%; height:auto;"/><br/>From the plots above we can see that &mdash; 
+<br/><br/><img src="fig/plot_001.png" style="width:100%; height:auto;"/><br/>From the plots above we can see that &mdash;
 <ul><li>data is significantly skewed over the <code>year</code> variable. The volume of data available between <code>1990 - 2018</code> (18 years) is far greater than the volume of data available between <code>1880 - 1990</code> (110 years). This trend could be for many reasons &mdash; (1) more games being played in recent years, (2) more data being captured & recorded for the games being played. We'll keep this trend in mind, while working with this dataset to build our learning models.</li>
 <li>data is also skewed over the <code>result</code> variable. There are far more observations with <code>result=win</code>, compared to combined observations of <code>result=loss</code>, and <code>result=draw</code>. As <code>result</code> variable will be our outcome variable, we would have preferred if the volume of data was balanced between these three levels of <code>result</code> variable. We'll have to keep this trend in mind, while working with this dataset to build our learning models.</li>
-</ul>
+</ul><br/>
+
+<h3 id="section-v2">Visualize: Top 20 Winners & Losers</h3>
 <img src="fig/plot_002.png" style="width:100%; height:auto;"/><br/>
 The plot above shows the &mdash;
 <ul>
@@ -169,10 +279,10 @@ The plot above shows the &mdash;
 <li>top-20 teams (left-plot) for last 10 years: Mexico, Egypt, USA, Japan, Spain, ...</li>
 <li>bottom-20 teams (right-plot) for last 10 years: Luxembourg, Andorra, Malta, Qatar, San Marino, ...</li>
 </ul><br/>
-From the data above we can see that there is a significant change in both top & bottom team orders within last 10 years. We see the top 4 teams of all time: Brazil, Argentina, Germany, England, do not show up in top 5 teams for last 10 years. What could be the reason for this? 
+From the data above we can see that there is a significant change in both top & bottom team orders within last 10 years. We see the top 4 teams of all time: Brazil, Argentina, Germany, England, do not show up in top 5 teams for last 10 years. What could be the reason for this?
 </p><br/>
 
-<h3>Dataset Transformation: Adding FIFA Team Ranking</h3>
+<h3 id="section-f2">Add new features: FIFA Team Ranking</h3>
 <p>We scraped FIFA offical team rankings, from: https://www.fifa.com/fifa-world-ranking/ranking-table/men/index.html. FIFA started maintaing the offical ranking data from the year 1993, and this data gets updated on monthly basis. We are adding following new variables &mdash;<br/>
 <ul><li><code>home_rank</code>: max rank of the home team in the given year</li>
 <li><code>away_rank</code>: max rank of the away team in the given year</li>
@@ -200,11 +310,375 @@ df_matches.sample(10)
 </code></pre>
 <p><img src="fig/py_tbl_006.png" style="width:100%; height:auto;"/></p><br/>
 
-<h3>Data Visualization: Team Rankings</h3>
+<h3 id="section-v3">Visualize: Distribution of Team Rankings, and Rank Difference, grouped by Game Results</h3>
 <p>We'll run some visualizations based on team rankings to understand, how the team ranking affects the outcome of a match.'</p>
 <img src="fig/plot_004.png" style="width:100%; height:auto;"/><br/>
 <p>The left-side plot above seems to suggest that team rankings might be correlated to outcome of the match. The first set of violin-plots suggest that when home_team ranking are lower than away_team ranking, the home_team is more likely to loose the game. The middle set of violin-plots suggest that when home_team ranking are greater than away_team ranking, the home_team is more likely to win the game. The last set of violin-plots (to the extreme right), suggest that when home_team ranking, and away_team ranking are similar, the game is more likely to draw.</p><br/>
 
+
+
+<h3 id="section-f3">Add new features</h3>
+<p>We'll add more features to our dataset &mdash;<br/>
+<ul><li><code>year_wt</code>: Year Weight: higher weightage to recent data, lower weightage to older data</li>
+<li><code>home_wc_points</code>: FIFA World Cup Points for home team</li>
+<li><code>away_wc_points</code>: FIFA World Cup Points for away team</li>
+<li><code>home_wc_plays</code>: FIFA World Cup Participations by home team</li>
+<li><code>away_wc_plays</code>: FIFA World Cup Participations by away team</li>
+<li><code>home_p_age_wt</code>: FIFA Player's Age weight for home team</li>
+<li><code>away_p_age_wt</code>: FIFA Player's Age weight for away team</li>
+<li><code>home_p_prf_wt</code>: FIFA Player's Performance weight for home team</li>
+<li><code>away_p_prf_wt</code>: FIFA Player's Performance weight for away team</li></ul>
+</p><br/>
+
+<h3 id="section-f4">Add new features: Quadratic & Interaction terms</h3>
+<p>We'll add some qudratic and interaction terms, which we know are not linear in real world &mdash;<br/>
+<ul><li><code>home_p_age_wt_2</code>: 2nd order term for FIFA Player's Age weight for home team</li>
+<li><code>home_p_age_wt_3</code>: 3rd order term for FIFA Player's Age weight for home team</li>
+<li><code>home_p_prf_wt_2</code>: 2nd order term for FIFA Player's Performance weight for home team</li>
+<li><code>home_p_prf_wt_3</code>: 3rd order term for FIFA Player's Performance weight for home team</li>
+<li><code>home_p_age_perf_wt</code>: interaction term between FIFA Player's Age and Performance weight for home team</li>
+<li><code>away_p_age_wt_2</code>: 2nd order term for FIFA Player's Age weight for away team</li>
+<li><code>away_p_age_wt_3</code>: 3rd order term for FIFA Player's Age weight for away team</li>
+<li><code>away_p_prf_wt_2</code>: 2nd order term for FIFA Player's Performance away for home team</li>
+<li><code>away_p_prf_wt_3</code>: 3rd order term for FIFA Player's Performance away for home team</li>
+<li><code>away_p_age_perf_wt</code>: interaction term between FIFA Player's Age and Performance weight for away team</li></ul>
+</p><br/>
+
+<h3 id="section-f5">Normalize data & Dummy variables</h3>
+<p>Finally, we will normalize all continous variables, and convert home_team, and away_team categorical variables into their respective dummy variables.</p><br/>
+
+<h3 id="section-f6">Create Training and Test split</h3>
+<p>Our final dataset has 11,746 observations, and 577 predictor variables. We'll split this dataset into 90%-10% between training and test datasets.</p>
+<pre><code class="python"># split training and test datasets
+X_train, X_test, y_train, y_test = train_test_split(x_df_final, y_df_final, test_size=0.1, random_state=42)
+print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
+</code></pre>
+<code>[out]: (10571, 576) (1175, 576) (10571,) (1175,)</code><br/><br/>
+
+<h1 id="section-models">Building Models</h1>
+<p>We'll build following models &mdash;
+<ul>
+  <li>
+    Single Models
+    <ul>
+      <li>Logistic Regression</li>
+      <li>Linear Discriminant Analysis</li>
+      <li>Quadratic Discriminant Analysis</li>
+      <li>K-Nearest Neighbors</li>
+      <li>Decision Tree Classifier</li>
+    </ul>
+  </li>
+  <li>
+    Ensemble Models
+    <ul>
+      <li>Random Forest Classifier</li>
+      <li>AdaBoost Classifier</li>
+      <li>Stacking</li>
+    </ul>
+  </li>
+  <li>Neural Network</li>
+  <li>Compare Model Performance</li>
+</ul>
+<code>Note</code>: We use GridSearchCV to tune hyper parameters
+for each of the model, we train.
+</p><br/>
+
+<h3 id="section-models-logistic">Logistic Regression</h3>
+<pre><code class="python"># build parameters list to find best parameter values
+parameters = {
+    'C':[.01, 1, 10, 100, 1000],
+    'solver':['newton-cg', 'lbfgs', 'sag'],
+    'fit_intercept':[True,False]
+}
+
+# build base estimator model, and run GridSearchCV to find best model
+start_time = time.time()
+model = LogisticRegression(penalty="l2", max_iter=1000)
+gs = GridSearchCV(estimator=model, param_grid=parameters, cv=5, n_jobs=4, verbose=1).fit(X_train, y_train)
+exe_time = round((time.time() - start_time)/60, 2)
+</code></pre>
+<code>[Logistic Regression]<br/>
+  Execution time : 4.32 minutes<br/>
+  Train Accuracy : 0.7409<br/>
+  Test Accuracy  : 0.7106<br/>
+<br/>
+  Best Model:<br/>
+   LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=False,<br/>
+            intercept_scaling=1, max_iter=1000, multi_class='ovr', n_jobs=1,<br/>
+            penalty='l2', random_state=None, solver='lbfgs', tol=0.0001,<br/>
+            verbose=0, warm_start=False)<br/>
+</code><br/><br/>
+
+<h3 id="section-models-lda">Linear Discriminant Analysis</h3>
+<pre><code class="python"># build parameters list to find best parameter values
+parameters = {
+    'shrinkage':[.001, .01, .1, 1],
+    'solver':['lsqr', 'eigen']
+}
+
+# build base estimator model, and run GridSearchCV to find best model
+start_time = time.time()
+model = LinearDiscriminantAnalysis()
+gs = GridSearchCV(estimator=model, param_grid=parameters, cv=5, n_jobs=4, verbose=1).fit(X_train, y_train)
+exe_time = round((time.time() - start_time)/60, 2)
+</code></pre>
+<code>[Linear Discriminant Analysis]<br/>
+Execution time : 0.07 minutes<br/>
+Train Accuracy : 0.7405<br/>
+Test Accuracy  : 0.7140<br/>
+<br/>
+Best Model:<br/>
+ LinearDiscriminantAnalysis(n_components=None, priors=None, shrinkage=0.1,<br/>
+              solver='lsqr', store_covariance=False, tol=0.0001)
+</code><br/><br/>
+
+<h3 id="section-model-qda">Quadratic Discriminant Analysis</h3>
+<pre><code class="python"># build parameters list to find best parameter values
+parameters = {
+    'reg_param':[.001, .01, .1, 1]
+}
+
+# build base estimator model, and run GridSearchCV to find best model
+start_time = time.time()
+model = QuadraticDiscriminantAnalysis()
+gs = GridSearchCV(estimator=model, param_grid=parameters, cv=5, n_jobs=4, verbose=1).fit(X_train, y_train)
+exe_time = round((time.time() - start_time)/60, 2)
+</code></pre>
+<code>[Quadratic Discriminant Analysis]<br/>
+Execution time : 0.15 minutes<br/>
+Train Accuracy : 0.7086<br/>
+Test Accuracy  : 0.6868<br/>
+<br/>
+Best Model:
+ QuadraticDiscriminantAnalysis(priors=None, reg_param=0.1,<br/>
+               store_covariance=False, store_covariances=None, tol=0.0001)
+</code><br/><br/>
+
+<h3 id="section-model-knn">K-Nearest Neighbors</h3>
+<pre><code class="python"># build parameters list to find best parameter values
+parameters = {
+    'n_neighbors':[10, 20, 40, 60],
+    'weights':['uniform','distance'],
+    'algorithm':['ball_tree','kd_tree']
+}
+
+# build base estimator model, and run GridSearchCV to find best model
+start_time = time.time()
+model = KNeighborsClassifier()
+gs = GridSearchCV(estimator=model, param_grid=parameters, cv=5, n_jobs=4, verbose=1).fit(X_train, y_train)
+exe_time = round((time.time() - start_time)/60, 2)
+</code></pre>
+<code>[K-Nearest Neighbors]<br/>
+Execution time : 29.1 minutes<br/>
+Train Accuracy : 0.9886<br/>
+Test Accuracy  : 0.6528<br/>
+<br/>
+Best Model:<br/>
+ KNeighborsClassifier(algorithm='kd_tree', leaf_size=30, metric='minkowski',<br/>
+           metric_params=None, n_jobs=1, n_neighbors=20, p=2,<br/>
+           weights='distance')
+</code><br/><br/>
+
+<h3 id="section-model-dtree">Decision Tree Classifier</h3>
+<pre><code class="python"># build parameters list to find best parameter values
+parameters = {
+    'criterion':['gini','entropy'],
+    'splitter':['best','random'],
+    'max_depth':[5,10,50,30,60]
+}
+
+# build base estimator model, and run GridSearchCV to find best model
+start_time = time.time()
+model = DecisionTreeClassifier()
+gs = GridSearchCV(estimator=model, param_grid=parameters, cv=5, n_jobs=4, verbose=1).fit(X_train, y_train)
+exe_time = round((time.time() - start_time)/60, 2)
+</code></pre>
+<code>[Decision Tree Classifier]<br/>
+Execution time : 0.12 minutes<br/>
+Train Accuracy : 0.7034<br/>
+Test Accuracy  : 0.6689<br/>
+<br/>
+Best Model:<br/>
+ DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=10,<br/>
+            max_features=None, max_leaf_nodes=None,<br/>
+            min_impurity_decrease=0.0, min_impurity_split=None,<br/>
+            min_samples_leaf=1, min_samples_split=2,<br/>
+            min_weight_fraction_leaf=0.0, presort=False, random_state=None,<br/>
+            splitter='random')
+</code><br/><br/>
+
+<h3 id="section-model-randomf">Random Forest Classifier</h3>
+<pre><code class="python"># build parameters list to find best parameter values
+parameters = {
+    'n_estimators':[20,40,80,100,200],
+    'criterion':['gini','entropy'],
+    'max_depth':[5,10,50,30,60]
+}
+
+# build base estimator model, and run GridSearchCV to find best model
+start_time = time.time()
+model = RandomForestClassifier(bootstrap=True)
+gs = GridSearchCV(estimator=model, param_grid=parameters, cv=5, n_jobs=4, verbose=1).fit(X_train, y_train)
+exe_time = round((time.time() - start_time)/60, 2)
+</code></pre>
+<code>[Random Forest Classifier]<br/>
+Execution time : 2.49 minutes<br/>
+Train Accuracy : 0.9501<br/>
+Test Accuracy  : 0.6868<br/>
+<br/>
+Best Model:<br/>
+ RandomForestClassifier(bootstrap=True, class_weight=None, criterion='entropy',<br/>
+            max_depth=30, max_features='auto', max_leaf_nodes=None,<br/>
+            min_impurity_decrease=0.0, min_impurity_split=None,<br/>
+            min_samples_leaf=1, min_samples_split=2,<br/>
+            min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=1,<br/>
+            oob_score=False, random_state=None, verbose=0,<br/>
+            warm_start=False)
+</code><br/><br/>
+
+<h3 id="section-model-adaboost">AdaBoost Classifier</h3>
+<pre><code class="python"># build parameters list to find best parameter values
+parameters = {
+    'learning_rate':[0.001, 0.01, 0.1, 1],
+    'n_estimators':[10,20,40,80,100]
+}
+
+# build base estimator model, and run GridSearchCV to find best model
+start_time = time.time()
+rf_model = RandomForestClassifier(bootstrap=True)
+model = AdaBoostClassifier(base_estimator=rf_model)
+gs = GridSearchCV(estimator=model, param_grid=parameters, cv=5, n_jobs=4, verbose=1).fit(X_train, y_train)
+exe_time = round((time.time() - start_time)/60, 2)
+</code></pre>
+<code>[AdaBoost Classifier]<br/>
+Execution time : 9.61 minutes<br/>
+Train Accuracy : 0.9886<br/>
+Test Accuracy  : 0.6621<br/>
+<br/>
+Best Model:<br/>
+ AdaBoostClassifier(algorithm='SAMME.R',<br/>
+          base_estimator=RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',<br/>
+            max_depth=None, max_features='auto', max_leaf_nodes=None,<br/>
+            min_impurity_decrease=0.0, min_impurity_split=None,<br/>
+            min_samples_leaf=1, min_samples_split=2,<br/>
+            min_weight_fraction_leaf=0.0, n_estimators=10, n_jobs=1,<br/>
+            oob_score=False, random_state=None, verbose=0,<br/>
+            warm_start=False),<br/>
+          learning_rate=0.001, n_estimators=100, random_state=None)
+</code><br/><br/>
+
+<h3 id="section-model-stacking">Stacking</h3>
+<pre><code class="python">N=25
+all_results = {}
+for model in models.keys():
+    counter = 1
+    print("[{}]: computing bootstraped results...".format(model))
+    train_results=[]
+    test_results=[]
+    for i in range(N):
+        X, y = resample(X_train, y_train)
+        fit = models[model].fit(X, y)
+        train_results.append(round(accuracy_score(y, fit.predict(X)),4))
+        test_results.append(round(accuracy_score(y_test, fit.predict(X_test)),4))
+        colname = model + "." + str(counter)
+        stacked_results[colname] = fit.predict(X_test)
+        counter+=1
+    all_results.update({model:[train_results, test_results]})
+</code></pre>
+<code>[logistic]: computing bootstraped results...<br/>
+[lda]: computing bootstraped results...<br/>
+[qda]: computing bootstraped results...<br/>
+[knn]: computing bootstraped results...<br/>
+[dtc]: computing bootstraped results...<br/>
+[rfc]: computing bootstraped results...<br/>
+[ada]: computing bootstraped results...<br/>
+Train Accuracy  : 0.9944<br/>
+Test Accuracy  : 0.7013<br/>
+</code><br/><br/>
+
+<h3 id="section-model-neural">Neural Network</h3>
+<pre><code class="python">kfold = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
+start_time = time.time()
+for train, test in kfold.split(X, Y):
+    print("KFold: {}".format(counter), end="\r")
+    nn_model = Sequential([
+        Dense(576, input_shape=(576,), kernel_initializer='normal', activation='relu'),
+        Dense(144, kernel_initializer='normal', activation='relu'),
+        Dense(36, kernel_initializer='normal', activation='relu'),
+        Dense(9, kernel_initializer='normal', activation='relu'),
+        Dense(1, kernel_initializer='normal', activation='sigmoid')
+    ])
+    nn_model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+    mfit = nn_model.fit(X.iloc[train], Y[train], epochs=50, validation_split=0.2, shuffle=True, verbose=0)
+    nn_scores = nn_model.evaluate(X.iloc[test], Y[test], verbose=0)
+    nn_score = round(nn_scores[1],4)
+    nn_cvscores.append(nn_score)
+    counter+=1
+end_time = time.time()
+exe_time = round((end_time - start_time)/60, 2)
+</code></pre>
+<code>[Neural Network]<br/>
+Execution time : 9.49 minutes<br/>
+Train Accuracy : 0.8821<br/>
+Test Accuracy  : 0.6638<br/>
+_________________________________________________________________<br/>
+Layer (type)                 Output Shape              Param #   <br/>
+=================================================================<br/>
+dense_96 (Dense)             (None, 576)               332352    <br/>
+_________________________________________________________________<br/>
+dense_97 (Dense)             (None, 144)               83088     <br/>
+_________________________________________________________________<br/>
+dense_98 (Dense)             (None, 36)                5220      <br/>
+_________________________________________________________________<br/>
+dense_99 (Dense)             (None, 9)                 333       <br/>
+_________________________________________________________________<br/>
+dense_100 (Dense)            (None, 1)                 10        <br/>
+=================================================================<br/>
+Total params: 421,003<br/>
+Trainable params: 421,003<br/>
+Non-trainable params: 0<br/>
+_________________________________________________________________<br/>
+None
+</code><br/><br/>
+
+<h3 id="section-models-compare">Model Comparision</h3>
+<p>The table, and plot below shows the performance of each model on test data,
+  using 25-bootstaps for each model. We can see that Logistic and
+  Linear Discriminant Analysis models gives us the best performance.
+  KNN is the least performing model. Stacking all the models, gives us the
+  similar performance as the other best performing models. <br/>
+
+  <div align="center">
+    <img src="fig/tbl_compare.png" style="width:400px; height:auto;" />
+    <br/><small><em>Mean training & test accuracy scores of various models</em></small>
+  </div><br/>
+
+  <div align="center">
+    <img src="fig/compare.png" style="width:600px; height:auto;" />
+    <br/><small><em>Comparing performance of various models</em></small>
+  </div><br/>
+
+  <code>Note</code>: we did not bootstrapped Neural Network, and Stacking models.
+  The results shown above are from single model run.
+</p><br/><br/>
+
+<h1 id="section-models-final">Final Predictions</h3>
+<p>Finally we run our trained models, starting from the Round-16 match line-ups.
+  Our model, predicts the outcome for each of the Round-16 matches. Based on
+  Round-16 predictions, our model then proceeds to predict following rounds
+  &mdash; Quater Finals, Semi Finals, and Final. <br/><br/>
+
+  We use the <code>stacking</code> approach to predict the result of each match.
+  Each match data is run through each of the trained models, discussed above.
+  We then combine results from each of the model, and take a popular vote to
+  classify the outcome as Win/ Loose for the home team. (here, home team is
+  defined as the team listed first on the match line-up.)<br/>
+
+  <div align="center">
+    <img src="fig/final.png" style="width:800px; height:auto;" />
+    <br/><small><em>Final predictions from our trained models</em></small>
+  </div><br/>
+</p><br/><br/>
 
 
 
